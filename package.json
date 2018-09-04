@@ -1,0 +1,19 @@
+{
+  "name": "sassy-codearx",
+  "version": "0.0.1",
+  "description": "This is learning project about sass, gruntjs, gulpjs, nodejs, css, html and other tools",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aranab/sassy.git"
+  },
+  "author": "Md. Arafat Rahman Rana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aranab/sassy/issues"
+  },
+  "homepage": "https://github.com/aranab/sassy#readme"
+}
