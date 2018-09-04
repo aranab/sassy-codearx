@@ -1,0 +1,17 @@
+{
+  "name": "sassy-codearx",
+  "description": "This is learning project about sass, gruntjs, gulpjs, nodejs, css, html and other tools",
+  "main": "index.html",
+  "authors": [
+    "Md. Arafat Rahman Rana"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aranab/sassy-codearx",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
