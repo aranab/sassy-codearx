@@ -94,3 +94,10 @@ This is learning project about:
    3. Loading Grunt plugins and tasks
    4. Custom tasks
  - All tasks are loaded by ['load-grunt-tasks'](https://www.npmjs.com/package/load-grunt-tasks): `require('load-grunt-tasks')(grunt);`
+
+## Creating first task:
+ - Configure the ['grunt-sass'](https://www.npmjs.com/package/grunt-sass) inside grunt initConfig module.
+ - We can choose whether to use ['Dart Sass'](http://sass-lang.com/dart-sass) or 
+   ['Node Sass'](https://www.npmjs.com/package/node-sass) by passing the ['grunt-sass'](https://www.npmjs.com/package/grunt-sass) module to 
+   the implementation option. One implementation or the other must be passed.
+ - Compile command: `grunt sass`
