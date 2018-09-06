@@ -101,3 +101,8 @@ This is learning project about:
    ['Node Sass'](https://www.npmjs.com/package/node-sass) by passing the ['grunt-sass'](https://www.npmjs.com/package/grunt-sass) module to 
    the implementation option. One implementation or the other must be passed.
  - Compile command: `grunt sass`
+
+## Watching for automated tasks:
+ - ['grunt-contrib-watch'](https://www.npmjs.com/package/grunt-contrib-watch) will watch and run 
+   automated task whenever we making changes in folders or files which are defined in configuration.
+ - Compile command: `grunt watch`
