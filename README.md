@@ -81,3 +81,16 @@ This is learning project about:
    - [bourbon](https://www.bourbon.io/) `bower install bourbon --save-dev`
    - [susy](http://oddbird.net/susy/) (*grid-layout engine for Sass*) 
    - [normalize.css](https://github.com/necolas/normalize.css)
+
+## Configuring gruntfile.js:
+ - Grunt is javascript task runner or task manager and is the key to project automation.
+ - Task like to do such as compiling, minification, code linting and so on.
+ - The downside of the grunt is that the lot of inital setup needs to fullfil the automation.
+ - Grunt cli command line tools: `npm install -g grunt-cli`
+ - Grunt needs Gruntfile.js file and is used to configure or define tasks and load Grunt plugins.
+ - The Gruntfile is comprised of the following parts:
+   1. The "wrapper" function
+   2. Project and task configuration
+   3. Loading Grunt plugins and tasks
+   4. Custom tasks
+ - All tasks are loaded by ['load-grunt-tasks'](https://www.npmjs.com/package/load-grunt-tasks): `require('load-grunt-tasks')(grunt);`
