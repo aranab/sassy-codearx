@@ -117,3 +117,16 @@ This is learning project about:
  - ['grunt-contrib-uglify'](https://www.npmjs.com/package/grunt-contrib-uglify) must be 
    configured inside [gruntfile.js](https://github.com/aranab/sassy-codearx/blob/master/gruntfile.js)
  - Compile command: `grunt uglify`
+
+## Preparing the assets:
+ - Images are goes to image folder
+ - [backstretch](http://www.jquery-backstretch.com/) is a jQuery plugin that let you 
+   dynamically resize a background photo.
+ - [Font Awesome Download](https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css)
+ - [Font Awesome free](https://www.npmjs.com/package/@fortawesome/fontawesome-free)
+ - [Font Awesome Angular](https://www.npmjs.com/package/@fortawesome/angular-fontawesome)
+ - [Font Awesome React](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
+ - [Font Awesome Vue](https://www.npmjs.com/package/@fortawesome/vue-fontawesome)
+ - [Font Awesome Ember](https://www.npmjs.com/package/@fortawesome/ember-fontawesome)
+ - [Font Awesome Sass](https://fontawesome.com/how-to-use/on-the-web/using-with/sass)
+ - [Font Awesome Less](https://fontawesome.com/how-to-use/on-the-web/using-with/less)
