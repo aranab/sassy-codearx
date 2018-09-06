@@ -14,7 +14,6 @@ module.exports = function(grunt) {
          * https://www.npmjs.com/package/grunt-sass
          */
         sass: {
-
             options: {
                 implementation: sass,
                 sourceMap: false
@@ -31,8 +30,7 @@ module.exports = function(grunt) {
          * Monitor files and excute tasks
          * https://www.npmjs.com/package/grunt-contrib-watch
          */
-        watch: {
-            
+        watch: {            
             sass: {
                 files: [
                     'assets/scss/*.scss'
@@ -40,6 +38,30 @@ module.exports = function(grunt) {
                 tasks: [
                     'sass'
                 ]
+            },
+            scripts: {
+                files: [
+                    'assets/js/*.js'
+                ],
+                tasks: [
+                    'uglify'
+                ]
+            }
+        },
+
+        /**
+         * Grunt Contrib Uglify
+         * Minify JavaScript files
+         * https://www.npmjs.com/package/grunt-contrib-uglify
+         */
+        uglify: {
+            my_target: {
+                files: {
+                    'js/scripts.js': [
+                        'assets/js/scripts.js',
+                        'node_modules/jquery/dist/jquery.js'
+                    ]
+                }
             }
         }
     });

@@ -106,3 +106,14 @@ This is learning project about:
  - ['grunt-contrib-watch'](https://www.npmjs.com/package/grunt-contrib-watch) will watch and run 
    automated task whenever we making changes in folders or files which are defined in configuration.
  - Compile command: `grunt watch`
+
+
+## Minimizing JavaScript with Uglify:
+ - ['jQuery'](https://www.npmjs.com/package/jquery) is for using JavaScript in our project.
+ - Install command as dependencies: `npm install jquery --save`
+ - ['grunt-contrib-uglify'](https://www.npmjs.com/package/grunt-contrib-uglify) is for using minify 
+   the JavaScript into a single file.
+ - Install command as devDependencies: `npm install grunt-contrib-uglify --save-dev`
+ - ['grunt-contrib-uglify'](https://www.npmjs.com/package/grunt-contrib-uglify) must be 
+   configured inside [gruntfile.js](https://github.com/aranab/sassy-codearx/blob/master/gruntfile.js)
+ - Compile command: `grunt uglify`
