@@ -148,6 +148,16 @@ This is learning project about:
 
 ## Using Font Awesome:
  - We can font awesome by two way:
-   - Embedded <i> tag with font awesome class
+   - Embedded `<i>` tag with font awesome class
    - [Using css class with Unicode](https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements)
- - *Note: Accurate [Font Family](https://stackoverflow.com/questions/47894414/the-before-pseudo-element-not-working-in-font-awesome-v-5) name should be used.*  
+ - *Note: Accurate [Font Family](https://stackoverflow.com/questions/47894414/the-before-pseudo-element-not-working-in-font-awesome-v-5) name should be used.* 
+
+## Using custom fonts:
+ - [Free google fonts](https://fonts.google.com/)
+
+## Styling default HTML styles:
+ - Markup such as button, input textbox, textarea, typography etc are styled by using [Bourbon mixins](https://www.bourbon.io/docs/latest/) with less code writing.
+ - For Button: [Bourbon Button Mixins](https://www.bourbon.io/docs/latest#all-buttons)
+ - For input box: [Bourbon Inputbox Mixins](https://www.bourbon.io/docs/latest#all-text-inputs)
+ - For typography: [Bourbon Modular Scale Mixins](https://www.bourbon.io/docs/latest#modular-scale)
+ - For scale up and down images: [Bourbon Size Mixins](https://www.bourbon.io/docs/latest#size) 
