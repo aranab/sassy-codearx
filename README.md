@@ -130,3 +130,10 @@ This is learning project about:
  - [Font Awesome Ember](https://www.npmjs.com/package/@fortawesome/ember-fontawesome)
  - [Font Awesome Sass](https://fontawesome.com/how-to-use/on-the-web/using-with/sass)
  - [Font Awesome Less](https://fontawesome.com/how-to-use/on-the-web/using-with/less)
+
+## Modularizing Sass with partials:
+ - Organized our code into separate partial files and then compile it into single CSS file.
+ - Naming structure for sass partial is `_{fileName}.scss`. Example: `_header.scss`
+ - Partial files should be imported by `@import {filePath}` statement before used them inside 
+   main file.
+ - Ordering of importing partial files are very important. Dependency files should be imported first.
