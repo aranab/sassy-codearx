@@ -145,3 +145,9 @@ This is learning project about:
 ## Using nested styles for a menu:
  - Nesting styles are very petty and powerful in sass programming.
  - Greate article about [*Sass Ampersand* in css-tricks website](https://css-tricks.com/the-sass-ampersand/)
+
+## Using Font Awesome:
+ - We can font awesome by two way:
+   - Embedded <i> tag with font awesome class
+   - [Using css class with Unicode](https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements)
+ - *Note: Accurate [Font Family](https://stackoverflow.com/questions/47894414/the-before-pseudo-element-not-working-in-font-awesome-v-5) name should be used.*  
