@@ -137,3 +137,7 @@ This is learning project about:
  - Partial files should be imported by `@import {filePath}` statement before used them inside 
    main file.
  - Ordering of importing partial files are very important. Dependency files should be imported first.
+
+## Creating a color palette with sass variables:
+ - Variables are very useful for sass project because we can use them every place and assign or change the value of each varible in one place.
+ - Make a color palette from: [Coolors](https://coolors.co/)

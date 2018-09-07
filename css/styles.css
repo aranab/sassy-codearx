@@ -296,3 +296,7 @@ template {
  */
 [hidden] {
   display: none; }
+
+/* Color paletter */
+p {
+  color: #09acc1; }
