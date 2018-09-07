@@ -141,3 +141,7 @@ This is learning project about:
 ## Creating a color palette with sass variables:
  - Variables are very useful for sass project because we can use them every place and assign or change the value of each varible in one place.
  - Make a color palette from: [Coolors](https://coolors.co/)
+
+## Using nested styles for a menu:
+ - Nesting styles are very petty and powerful in sass programming.
+ - Greate article about [*Sass Ampersand* in css-tricks website](https://css-tricks.com/the-sass-ampersand/)
