@@ -160,4 +160,44 @@ This is learning project about:
  - For Button: [Bourbon Button Mixins](https://www.bourbon.io/docs/latest#all-buttons)
  - For input box: [Bourbon Inputbox Mixins](https://www.bourbon.io/docs/latest#all-text-inputs)
  - For typography: [Bourbon Modular Scale Mixins](https://www.bourbon.io/docs/latest#modular-scale)
- - For scale up and down images: [Bourbon Size Mixins](https://www.bourbon.io/docs/latest#size) 
+ - For scale up and down images: [Bourbon Size Mixins](https://www.bourbon.io/docs/latest#size)
+
+# Creating Responsive Layout
+
+### Setting up susys defaults:
+ - [Susy](http://oddbird.net/susy/) is a toolkit for creating responsive layouts. 
+ - The main benefit of using [Susy](http://oddbird.net/susy/) is that its not need to create extra markup but other frameworks such as bootstrap has to be needed extra markup in order to achieve the responsive layout.
+ - [Susy needs little bit setup](http://oddbird.net/susy/docs/)
+   ```
+   $susy: (
+       'columns': susy-repeat(12),
+       'gutters': 0.1667
+   );
+   ``` 
+
+### Starting layout structure:
+ - Reset global box size base on [*CSS Trick article*](https://css-tricks.com/box-sizing/#article-header-id-6).
+   ```
+   html {
+      box-sizing: border-box;
+   }
+
+   *, *:before, *:after {
+       box-sizing: inherit;
+   }
+   ```
+ - And wrap class width would be 70%
+   ```
+   .wrap {
+       max-width: 70%;
+       margin-left: auto;
+       margin-right: auto;
+
+       &::after { // this is nested sass
+           content: " ";
+           clear: both;
+           display: block;
+       }
+    }
+   ```
+ - Column width calculated by Susy function `span()` and `gutter()`

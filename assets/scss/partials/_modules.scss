@@ -14,7 +14,7 @@
 
 .feature img {
     border-radius: $default-border-radius;
-    @include size(250px, auto);
+    @include size(100%, auto);
 }
 
 .customer img {

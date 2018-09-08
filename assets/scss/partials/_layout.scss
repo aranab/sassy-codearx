@@ -1,0 +1,39 @@
+// Susy setup
+$susy: (
+    'columns': susy-repeat(12),
+    'gutters': 1/6
+);
+
+.wrap {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &::after {
+        content: " ";
+        clear: both;
+        display: block;
+    }
+}
+
+.features .feature {
+    float: left;
+    width: span(3 of 12);
+    margin-right: gutter();
+
+    &:last-child {
+        float: right;
+        margin-right: 0;
+    }
+}
+
+.content {
+    float: left;
+    width: span(8);
+    margin-right: gutter();
+}
+
+.sidebar { 
+    float: right;   
+    width: span(4);
+}
