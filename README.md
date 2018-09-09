@@ -163,19 +163,24 @@ This is learning project about:
  - For scale up and down images: [Bourbon Size Mixins](https://www.bourbon.io/docs/latest#size)
 
 # Creating Responsive Layout
+  - Important note that all control from CSS grid hack system will be taken by [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout). Therefore, we should move on learning about [CSS Grid Layout](https://css-tricks.com/snippets/css/complete-guide-grid/).
 
-### Setting up susys defaults:
- - [Susy](http://oddbird.net/susy/) is a toolkit for creating responsive layouts. 
- - The main benefit of using [Susy](http://oddbird.net/susy/) is that its not need to create extra markup but other frameworks such as bootstrap has to be needed extra markup in order to achieve the responsive layout.
+### Setting up susy 3 defaults:
+ - [Susy 3](http://oddbird.net/susy/) is a toolkit for creating responsive layouts. 
+ - The main benefit of using [Susy 3](http://oddbird.net/susy/) is that its not need to create extra markup but other frameworks such as bootstrap has to be needed extra markup in order to achieve the responsive layout.
+ - [Susy 2 Shorthand Syntax](https://susy.readthedocs.io/shorthand/) for understanding shorthand syntax.
+ - [Susy 3 Shorthand Syntax](http://oddbird.net/2017/06/28/susy3/)
+ - [Susy 3 Spread (spread on containers & spread on spans)](http://oddbird.net/2017/06/13/susy-spread/) for understanding Spread.
  - [Susy needs little bit setup](http://oddbird.net/susy/docs/)
    ```
    $susy: (
-       'columns': susy-repeat(12),
-       'gutters': 0.1667
+       'columns': susy-repeat(12), // required in 'grid-template-columns'
+       'gutters': 0.1667 // using for 'grid-column-gap'
    );
    ``` 
 
 ### Starting layout structure:
+ - [Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) 
  - Reset global box size base on [*CSS Trick article*](https://css-tricks.com/box-sizing/#article-header-id-6).
    ```
    html {
@@ -186,6 +191,7 @@ This is learning project about:
        box-sizing: inherit;
    }
    ```
+   But [susy 3 strongly recommended](http://oddbird.net/2017/06/28/susy3/) that box model reset should like `* { box-sizing: border-box; }`
  - And wrap class width would be 70%
    ```
    .wrap {
@@ -201,3 +207,88 @@ This is learning project about:
     }
    ```
  - Column width calculated by Susy function `span()` and `gutter()`
+ - [*Make CSS custom properties or variables*](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+
+### Using media query breakpoints:
+ - Mobile-First is better approach.
+   - [*Mozilla Article*](https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive/Responsive/Mobile_first)
+   - [*Site Point Article*](https://www.sitepoint.com/introduction-mobile-first-media-queries/)
+   - [*Zell Liew Article*](https://zellwk.com/blog/how-to-write-mobile-first-css/) 
+ - Susy 2 has [Breakpoint mixin](https://susy.readthedocs.io/toolkit/#breakpoint) and that mixin helps to create media query for you.
+ - Susy 3 does not have any mixins, so we have to define one by own from [Susy 3 Media Queries & Grid Settings](http://oddbird.net/2017/09/25/susy-use/)
+ - Susy 3 shared some concept of mixin:
+   ```
+   // Idea - 1
+   $medium: (
+     'columns': susy-repeat(8),
+     'gutters': 1em,
+   );
+
+   // any code out here uses the global $susy settings…
+
+   @media (min-width: 30em) {
+     @include susy-use($medium) {
+       // any code in this block will use the $medium settings…
+     }
+   }
+
+   @mixin susy-use(
+     $config
+   ) {
+     //  parse and normalize any shorthand arguments
+     $config: susy-compile($config);
+
+     // record the global settings -
+     // and update the global variable with our new settings
+     $global: $susy;
+     $susy: map-merge($susy, $config) !global;
+
+     // any content inside this mixin
+     // will use the local settings
+     @content;
+
+     // return the global variable to its initial value
+     $susy: $global !global;
+   }
+   ```
+   ```
+   //Idea -2
+   // it is safe to add non-Susy data to Susy maps
+   $medium: (
+     'min-width': 30em,
+     'columns': susy-repeat(8),
+     'gutters': 1em,
+   );
+
+   // any code out here uses the global $susy settings…
+
+   @include susy-at($medium) {
+     // this block establishes a new breakpoint,
+     // and any code in this block will use the $medium settings…
+   }
+
+   @mixin susy-at(
+     $config
+   ) {
+     //  parse and normalize any shorthand arguments
+     $config: susy-compile($config);
+
+     // build min-and-max queries
+     $min: map-get($config, 'min-width');
+     $min: if($min, '(min-width: #{$min})', null);
+     $max: map-get($config, 'max-width');
+     $max: if($max, '(max-width: #{$max})', null);
+
+     // combine them if we need both
+     $and: if($min and $max, '#{$min} and #{$max}', null);
+     // or fall back to the value we need…
+     $query: $and or $min or $max;
+
+     // apply the results…
+     @media #{$query} {
+       @include susy-use($config) {
+         @content;
+       }
+     }
+   }
+   ```
