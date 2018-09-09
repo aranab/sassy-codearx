@@ -21,3 +21,21 @@
     border-radius: $default-border-radius;
     @include size(150px);    
 }
+
+.testimonials {
+    background: $blue;
+    color: $gray;
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+
+    .name {
+        display: block;
+    }
+
+    .quote {
+        font-style: italic;
+        font-family: $serif;
+    }
+}

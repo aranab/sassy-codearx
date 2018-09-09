@@ -163,7 +163,7 @@ This is learning project about:
  - For scale up and down images: [Bourbon Size Mixins](https://www.bourbon.io/docs/latest#size)
 
 # Creating Responsive Layout
-  - Important note that all control from CSS grid hack system will be taken by [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout). Therefore, we should move on learning about [CSS Grid Layout](https://css-tricks.com/snippets/css/complete-guide-grid/).
+  - Important note that all CSS grid hack system controls will be taken by [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout). Therefore, we should move on learning about [CSS Grid Layout](https://css-tricks.com/snippets/css/complete-guide-grid/).
 
 ### Setting up susy 3 defaults:
  - [Susy 3](http://oddbird.net/susy/) is a toolkit for creating responsive layouts. 
@@ -292,3 +292,22 @@ This is learning project about:
      }
    }
    ```
+
+### Content Pushing, pulling and padding for susy:
+ - To push content 3 column from left to right
+   ```
+   margin-left: span(3 wide);
+   ```
+ - To pull content 1 column from right to left
+   ```
+   margin-left: 0 - span(1 wide);
+   ```
+ - To pad content 1 column from left to right 
+   ```
+   padding: 0 span(1 wide);
+   ```
+ - Note: to align the content need a `wide` span spread.
+
+## License
+ Single license MIT
+ 

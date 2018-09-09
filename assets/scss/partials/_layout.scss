@@ -12,6 +12,21 @@ $susy: (
     @include clearfix;
 }
 
+.site-branding {
+    @include susy-at($medium) {
+        float: left;
+        width: span(3);
+    }
+}
+
+.header-nav {
+    @include susy-at($medium) {
+        float: right;
+        width: span(9);
+        padding-top: 40px;
+    }
+}
+
 .features {
     @include clearfix;
 }
@@ -19,9 +34,9 @@ $susy: (
 .features .feature {    
     float: left;  
 
-    @include susy-at($medium) {
-        background: susy-svg-grid() no-repeat scroll;        
-        width: span(4);
+    @include susy-at($medium, 959px) {
+        //background: susy-svg-grid() no-repeat scroll;        
+        width: span(6);
         margin-right: gutter();
         
         &:nth-of-type(even) {
@@ -31,7 +46,7 @@ $susy: (
     } 
      
     @include susy-at($large) {
-        background: susy-svg-grid() no-repeat scroll;
+        //background: susy-svg-grid() no-repeat scroll;
         width: span(3);
         margin-right: gutter();
 
@@ -44,7 +59,7 @@ $susy: (
 
 .content {
     @include susy-at($large) {
-        background: susy-svg-grid() no-repeat scroll;
+        //background: susy-svg-grid() no-repeat scroll;
         float: left;
         width: span(8);
         margin-right: gutter();
@@ -53,8 +68,16 @@ $susy: (
 
 .sidebar { 
     @include susy-at($large) {
-        background: susy-svg-grid() no-repeat scroll;
+        //background: susy-svg-grid() no-repeat scroll;
         float: right;   
         width: span(4);
     }
+}
+
+.testimonial {
+    @include susy-at($large) { 
+        // background: susy-svg-grid() no-repeat scroll;
+        width: span(6);
+        margin-left: span(3 wide);
+    }    
 }

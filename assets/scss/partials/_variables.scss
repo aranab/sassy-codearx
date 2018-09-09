@@ -12,15 +12,13 @@ $default-border-radius: 20px;
 
 $small: (
   'min-width': 480px,
-  'max-width': 639px,
   'columns': susy-repeat(4),
   'gutters': 1/6,
 );
 
 $medium: (
   'min-width': 640px,
-  'max-width': 959px,
-  'columns': susy-repeat(8),
+  'columns': susy-repeat(12),
   'gutters': 1/6,
 );
 
@@ -31,16 +29,16 @@ $large: (
 );
 
 @mixin susy-at(
-  $config
+  $config,
+  $maxWidth: false
 ) {
   //  parse and normalize any shorthand arguments
   $config: susy-compile($config);
 
   // build min-and-max queries
   $min: map-get($config, 'min-width');
-  $min: if($min, '(min-width: #{$min})', null);
-  $max: map-get($config, 'max-width');
-  $max: if($max, '(max-width: #{$max})', null);
+  $min: if($min, '(min-width: #{$min})', null);  
+  $max: if($maxWidth, '(max-width: #{$maxWidth})', null);
 
   // combine them if we need both
   $and: if($min and $max, '#{$min} and #{$max}', null);
