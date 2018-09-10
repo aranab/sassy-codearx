@@ -1,6 +1,6 @@
 # Resource Overview
 This is learning project about:
- 1. [sass](https://sass-lang.com/)
+ 1. [Sass](https://sass-lang.com/)
  2. [Bourbon](https://www.bourbon.io/)
  3. [gruntjs](http://gruntjs.com/)
  4. [gulpjs](http://gulpjs.com/) 
