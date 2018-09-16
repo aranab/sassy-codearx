@@ -1,16 +1,13 @@
 # Resource Overview
 This is learning project about:
  1. [Sass](https://sass-lang.com/)
- 2. [Bourbon](https://www.bourbon.io/)
- 3. [gruntjs](http://gruntjs.com/)
- 4. [gulpjs](http://gulpjs.com/) 
- 5. [nodejs](https://nodejs.org/en/)
- 6. [npm](https://www.npmjs.com/)
- 7. [Bower](https://bower.io/)
- 8. [Susy](http://oddbird.net/susy/)(*grid-layout engine for Sass*) 
- 9. [normalize.css](https://github.com/necolas/normalize.css)
- 10. CSS Frameworks: [Bootstrap](http://getbootstrap.com/), [Foundation](https://foundation.zurb.com/)
- 11. HTML 
+ 2. [Susy](http://oddbird.net/susy/)(*grid-layout engine for Sass*)
+ 3. [Bourbon](https://www.bourbon.io/)
+ 4. [normalize.css](https://github.com/necolas/normalize.css)
+ 5. [gruntjs](http://gruntjs.com/)
+ 6. [nodejs](https://nodejs.org/en/)
+ 7. [npm](https://www.npmjs.com/)
+ 8. HTML 
 
  ### What is Sass?
   - Syntactically Awesome Stylesheet
@@ -25,6 +22,7 @@ This is learning project about:
  - Sass has two syntax and file extension 
    - .sass : Indented CSS << syntax has no code block brackets and semi-colon, and has own syntax highlight.
    - .scss : Sassy CSS << syntax like regular css and more approachable syntax.
+ - [LibSass](https://sass-lang.com/libsass) and it's node module [node-sass](https://www.npmjs.com/package/node-sass) has been installed and implemented in this project.
 
 ### What is Bourbon? 
  - [Bourbon](https://www.bourbon.io/) is a small library that runs on top of sass.
@@ -54,33 +52,26 @@ This is learning project about:
             |- scripts.js
          |- scss
             |- styles.scss
-      |- css
-      |- js
+      |- dist
+         |- css
+            |- styles.css
+         |- images
+         |- js
+            |- bundle.js
       |- index.html
    ```
 ## Configuring package.json: 
  - https://docs.npmjs.com/files/package.json
  - dependencies
+   - [jquery](https://www.npmjs.com/package/jquery): Run `> npm install jquery --save`
  - devDependencies
-   - [grunt](http://gruntjs.com/) `npm install grunt --save-dev`
-   - grunt-contrib-watch
-   - grunt-sass
-   - load-grunt-tasks
-
-## Using Bower with bower.json:
- - https://bower.io/
- - Bower is very similar to npm but it is managed only frontend package.
-   But sometimes both are shared same packages.
- - `npm install -g bower`
- - bower configuration file: bower.json and created by: bower init
-
-## Configuration bower.json:
- - https://bower.io/search/
- - dependencies
- - devDependencies
-   - [bourbon](https://www.bourbon.io/) `bower install bourbon --save-dev`
-   - [susy](http://oddbird.net/susy/) (*grid-layout engine for Sass*) 
-   - [normalize.css](https://github.com/necolas/normalize.css)
+   - [grunt](http://gruntjs.com/): Run `> npm install grunt --save-dev`
+   - [grunt-contrib-watch](https://www.npmjs.com/package/grunt-contrib-watch): Run `> npm install grunt-contrib-watch --save-dev`
+   - [grunt-sass](https://www.npmjs.com/package/grunt-sass): Run `> npm install grunt-sass --save-dev`
+   - [load-grunt-tasks](https://www.npmjs.com/package/load-grunt-tasks): Run `> npm install load-grunt-tasks --save-dev`
+   - [node-sass](https://www.npmjs.com/package/node-sass): Run `> npm install node-sass --save-dev`
+   - [susy](https://www.npmjs.com/package/susy): Run `> npm install susy --save-dev` 
+   - [bourbon](https://www.npmjs.com/package/bourbon): Run `> npm install bourbon --save-dev`
 
 ## Configuring gruntfile.js:
  - Grunt is javascript task runner or task manager and is the key to project automation.
@@ -100,13 +91,12 @@ This is learning project about:
  - We can choose whether to use ['Dart Sass'](http://sass-lang.com/dart-sass) or 
    ['Node Sass'](https://www.npmjs.com/package/node-sass) by passing the ['grunt-sass'](https://www.npmjs.com/package/grunt-sass) module to 
    the implementation option. One implementation or the other must be passed.
- - Compile command: `grunt sass`
+ - Compile command: Run `> grunt sass`
 
 ## Watching for automated tasks:
  - ['grunt-contrib-watch'](https://www.npmjs.com/package/grunt-contrib-watch) will watch and run 
    automated task whenever we making changes in folders or files which are defined in configuration.
- - Compile command: `grunt watch`
-
+ - Compile command: Run `> grunt watch`
 
 ## Minimizing JavaScript with Uglify:
  - ['jQuery'](https://www.npmjs.com/package/jquery) is for using JavaScript in our project.
@@ -116,7 +106,7 @@ This is learning project about:
  - Install command as devDependencies: `npm install grunt-contrib-uglify --save-dev`
  - ['grunt-contrib-uglify'](https://www.npmjs.com/package/grunt-contrib-uglify) must be 
    configured inside [gruntfile.js](https://github.com/aranab/sassy-codearx/blob/master/gruntfile.js)
- - Compile command: `grunt uglify`
+ - Compile command: Run `> grunt uglify`
 
 ## Preparing the assets:
  - Images are goes to image folder

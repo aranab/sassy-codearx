@@ -18,12 +18,14 @@
   "homepage": "https://github.com/aranab/sassy-codearx#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
+    "bourbon": "^5.1.0",
     "grunt": "~1.0.3",
     "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.0.1",
     "load-grunt-tasks": "^4.0.0",
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.9.3",
+    "susy": "^3.0.5"
   },
   "dependencies": {
     "jquery": "^3.3.1"

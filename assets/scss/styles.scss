@@ -1,12 +1,10 @@
-@import 'bower_components/bourbon/core/bourbon';
-@import 'bower_components/normalize-css/normalize';
-@import 'bower_components/susy/sass/susy';
-@import 'bower_components/susy/sass/plugins/svg-grid';
-
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
+@import 'node_modules/bourbon/core/bourbon';
+@import 'node_modules/susy/sass/susy';
+@import 'node_modules/susy/sass/plugins/svg-grid';
 
 @import 'partials/variables';
 @import 'partials/base';
+@import 'partials/normalize';
 @import 'partials/footer';
 @import 'partials/header';
 @import 'partials/layout';
