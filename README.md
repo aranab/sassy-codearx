@@ -66,18 +66,26 @@ This is learning project about:
    - [jquery](https://www.npmjs.com/package/jquery): Run `> npm install jquery --save`
  - devDependencies
    - [grunt](http://gruntjs.com/): Run `> npm install grunt --save-dev`
-   - [grunt-contrib-watch](https://www.npmjs.com/package/grunt-contrib-watch): Run `> npm install grunt-contrib-watch --save-dev`
    - [grunt-sass](https://www.npmjs.com/package/grunt-sass): Run `> npm install grunt-sass --save-dev`
+   - [grunt-contrib-watch](https://www.npmjs.com/package/grunt-contrib-watch): Run `> npm install grunt-contrib-watch --save-dev`   
+   - [grunt-contrib-concat](https://www.npmjs.com/package/grunt-contrib-concat): Run `> npm install grunt-contrib-concat --save-dev`
+   - [grunt-contrib-uglify](https://www.npmjs.com/package/grunt-contrib-uglify): Run `> npm install grunt-contrib-uglify --save-dev`
+   - [grunt-contrib-jshint](https://www.npmjs.com/package/grunt-contrib-jshint): Run `> npm install grunt-contrib-jshint --save-dev`
+   - [grunt-contrib-qunit](https://www.npmjs.com/package/grunt-contrib-qunit): Run `> npm install grunt-contrib-qunit --save-dev`
+   - [grunt-contrib-clean](https://www.npmjs.com/package/grunt-contrib-clean): Run `> npm install grunt-contrib-clean --save-dev`
+   - [grunt-contrib-connect](https://www.npmjs.com/package/grunt-contrib-connect): Run `> npm install grunt-contrib-connect --save-dev`
    - [load-grunt-tasks](https://www.npmjs.com/package/load-grunt-tasks): Run `> npm install load-grunt-tasks --save-dev`
    - [node-sass](https://www.npmjs.com/package/node-sass): Run `> npm install node-sass --save-dev`
    - [susy](https://www.npmjs.com/package/susy): Run `> npm install susy --save-dev` 
    - [bourbon](https://www.npmjs.com/package/bourbon): Run `> npm install bourbon --save-dev`
+   - [jshint-stylish](https://www.npmjs.com/package/jshint-stylish): Run `> npm install jshint-stylish --save-dev`
+   - [fibers](https://www.npmjs.com/package/fibers): Run `> npm install fibers --save-dev`
 
 ## Configuring gruntfile.js:
  - Grunt is javascript task runner or task manager and is the key to project automation.
  - Task like to do such as compiling, minification, code linting and so on.
  - The downside of the grunt is that the lot of inital setup needs to fullfil the automation.
- - Grunt cli command line tools: `npm install -g grunt-cli`
+ - Grunt cli command line tools: Run `> npm install -g grunt-cli`
  - Grunt needs Gruntfile.js file and is used to configure or define tasks and load Grunt plugins.
  - The Gruntfile is comprised of the following parts:
    1. The "wrapper" function
@@ -100,13 +108,20 @@ This is learning project about:
 
 ## Minimizing JavaScript with Uglify:
  - ['jQuery'](https://www.npmjs.com/package/jquery) is for using JavaScript in our project.
- - Install command as dependencies: `npm install jquery --save`
+ - Install command as dependencies: `> npm install jquery --save`
+ - [grunt-contrib-concat](https://www.npmjs.com/package/grunt-contrib-concat) is concatenate all javascript files and make single file and then run the uglify task.
  - ['grunt-contrib-uglify'](https://www.npmjs.com/package/grunt-contrib-uglify) is for using minify 
    the JavaScript into a single file.
- - Install command as devDependencies: `npm install grunt-contrib-uglify --save-dev`
+ - Install command as devDependencies: `> npm install grunt-contrib-uglify --save-dev`
  - ['grunt-contrib-uglify'](https://www.npmjs.com/package/grunt-contrib-uglify) must be 
    configured inside [gruntfile.js](https://github.com/aranab/sassy-codearx/blob/master/gruntfile.js)
  - Compile command: Run `> grunt uglify`
+
+ ## For this project task running commands:
+  - Default: Run `> grunt`
+  - For build: Run `> grunt build`
+  - For cleaning the output files: Run `> grunt clean`
+  - For linting the javascript code: Run `> grunt jshint` 
 
 ## Preparing the assets:
  - Images are goes to image folder
@@ -144,6 +159,7 @@ This is learning project about:
 
 ## Using custom fonts:
  - [Free google fonts](https://fonts.google.com/)
+ - [Adobe TypeKit](https://typekit.com/)
 
 ## Styling default HTML styles:
  - Markup such as button, input textbox, textarea, typography etc are styled by using [Bourbon mixins](https://www.bourbon.io/docs/latest/) with less code writing.

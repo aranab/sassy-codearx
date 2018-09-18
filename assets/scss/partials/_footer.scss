@@ -18,14 +18,14 @@
     }
 
     &.twitter::before{       
-        content: '\f099';        
+        content: fa-content($fa-var-twitter);        
     }
 
     &.facebook::before{       
-        content: '\f09a';
+        content: fa-content($fa-var-facebook);
     }
 
     &.linkedin::before{        
-        content: '\f0e1';
+        content: fa-content($fa-var-linkedin);
     }
 }
